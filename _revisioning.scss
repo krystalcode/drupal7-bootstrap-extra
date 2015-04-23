@@ -1,0 +1,9 @@
+/**
+ * Rules related to the Revisioning module.
+ */
+// Keep the form action buttons on the left.
+body.page-node-revisions-publish {
+  .form-actions {
+    float: none !important;
+  }
+}

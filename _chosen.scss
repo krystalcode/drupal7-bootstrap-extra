@@ -1,0 +1,17 @@
+/**
+ * Rules for integrating with the chosen js plugin.
+ *
+ * The Chosen Bootstrap Look & Feel plugin needs to be installed
+ * (https://github.com/dbtek/chosen-bootstrap).
+ * The Chosen module css is not needed and should be disabled.
+ * The default chosen theme should also be disabled. This can be done by setting
+ * accordingly the option "Use the default chosen theme" in the Chosen module
+ * configuration.
+ */
+.chosen-container.form-control {
+  padding: 0;
+  border: 0;
+}
+.chosen-container-multi .chosen-choices .search-choice {
+  margin-bottom: 6px;
+}

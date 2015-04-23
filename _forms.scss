@@ -1,0 +1,137 @@
+/**
+ * General form rules.
+ */
+form {
+  /**
+   * Form sections defined as Bootstrap rows or Drupal vertical tabs.
+   * @Issue("Consider converting vertical tabs to bootstrap modals")
+   */
+
+  // Separate rows from one another.
+  .row,
+  .vertical-tabs {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed $gray-lighter;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .row {
+      border-bottom: 0;
+    }
+  }
+
+  // Display form action buttons on the right.
+  // Forms not using rows are overriden to have the buttons at the left.
+  // @Issue("The pull-right class should be added in the html instead so that we don't have to write overrides")
+  .form-actions {
+    margin-top: 20px;
+    @extend .pull-right;
+  }
+
+  // No need for margin in row title.
+  .field-group-bootstrap_grid_row-heading h3 {
+    margin-top: 0;
+  }
+
+  /**
+   * Element types.
+   */
+
+  // Fix for file input button being misaligned in Firefox when padding is
+  // present.
+  input[type=file] {
+    height: auto;
+    padding: 5px 4px 4px;
+  }
+
+  // Control visibility of the expand/collapse icons in collapsible fieldsets.
+  fieldset.collapsible {
+    .panel-title {
+      .glyphicon {
+        color: $gray;
+      }
+      .expand-icon {
+        display :none;
+      }
+    }
+
+    &.collapsed {
+      .panel-title {
+        .expand-icon {
+          display: inline;
+        }
+        .collapse-icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /**
+   * Field types.
+   */
+
+   // Improve file/image widgets when file is present.
+  .form-managed-file {
+    // Add info colors to the file size badge.
+    .badge {
+      margin-left: 10px;
+      color: $btn-info-color;
+      background: $btn-info-bg;
+      border-color: $btn-info-border;
+    }
+
+    // Extra small size looks better for the remove button.
+    button[value=Remove] {
+      @extend .btn-xs;
+    }
+  }
+
+  // Further improvements for the file widget.
+  .file-widget {
+    button[value=Remove] {
+      margin-left: 20px;
+    }
+  }
+
+  // Further improvements for the image widget.
+  .image-widget {
+    .image-preview {
+      padding-bottom: 0;
+      margin-right: 10px;
+    }
+
+    button[value=Remove] {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .form-type-textfield {
+      margin-top: 15px;
+    }
+  }
+
+  // Adjust link field columns so that Title and URL display evenly.
+  .link-field-column {
+    width: 50%;
+    padding-left: $grid-gutter-width / 2;
+
+    &:first-child {
+      padding-left: 0;
+      padding-right: $grid-gutter-width / 2;
+    }
+
+    .form-text {
+      width: auto;
+    }
+  }
+
+  // We don't need to show the weight toggle in multiple field tables.
+  .tabledrag-toggle-weight-wrapper {
+    display :none;
+  }
+}
