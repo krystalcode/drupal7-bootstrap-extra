@@ -1,0 +1,44 @@
+/**
+ * Rules for styling the diffs displayed when comparing node revisions or when
+ * viewing node changes using the diff module.
+ *
+ * @Issue("Port inline diff rules")
+ * @Issue("Diff marker width has issues when comparing revisions")
+ */
+html.js .diff-js-hidden {
+  display: none;
+}
+
+table.diff {
+  col.diff-marker {
+    width: 1.4em;
+  }
+  col.diff-content {
+    width: 50%;
+  }
+
+  td.diff-prevlink {
+    text-align: left;
+  }
+  td.diff-nextlink {
+    text-align: right;
+  }
+
+  td.diff-section-title {
+    text-decoration: underline;
+  }
+
+  td.diff-deletedline {
+    background-color: #fff5f8;
+    width: 50%;
+  }
+
+  td.diff-addedline {
+    background-color: #eaffea;
+    width: 50%;
+  }
+
+  .diffchange {
+    color: darken(#fff5f8, 50%);
+  }
+}
