@@ -1,0 +1,15 @@
+/**
+ * Rules related to icons.
+ */
+
+/**
+ * Icons within menu item links should be separated from the text.
+ */
+ul.menu li > a > .icon {
+  &:first-child {
+    margin-right: 5px;
+  }
+  &:last-child {
+    margin-left: 5px;
+  }
+}
