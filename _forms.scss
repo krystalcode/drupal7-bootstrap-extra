@@ -31,7 +31,6 @@ form {
   // @Issue("The pull-right class should be added in the html instead so that we don't have to write overrides")
   .form-actions {
     margin-top: 20px;
-    @extend .pull-right;
   }
 
   // No need for margin in row title.
