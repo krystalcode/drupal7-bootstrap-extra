@@ -1,3 +1,13 @@
 /**
  * Rules related to the Scald module.
  */
+
+/**
+ * Hide the wizard trail when creating or updating an atom because it does not
+ * really help with anything.
+ */
+#scald-atom-add-form-options {
+  .wizard-trail {
+    display: none;
+  }
+}
