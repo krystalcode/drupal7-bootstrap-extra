@@ -8,18 +8,20 @@ form {
    */
 
   // Separate rows from one another.
-  .row,
+  .field-group-bootstrap_grid_row,
   .vertical-tabs {
     margin-top: 20px;
     margin-bottom: 0;
     padding-bottom: 20px;
     border-bottom: 1px dashed $gray-lighter;
+  }
 
+  .field-group-bootstrap_grid_row {
     &:first-child {
       margin-top: 0;
     }
 
-    .row {
+    .field-group-bootstrap_grid_row {
       border-bottom: 0;
     }
   }
