@@ -12,6 +12,16 @@
   padding: 0;
   border: 0;
 }
-.chosen-container-multi .chosen-choices .search-choice {
-  margin-bottom: 6px;
+.chosen-container-multi {
+  line-height: 28px;
+
+  .chosen-choices {
+    li.search-choice {
+      margin: 6px 4px 0;
+    }
+    li.search-field {
+      height: 32px;
+      padding: 3px;
+    }
+  }
 }
