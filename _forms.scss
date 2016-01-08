@@ -136,7 +136,8 @@ form {
     }
   }
 
-  // We don't need to show the weight toggle in multiple field tables.
+  // We don't need to show the weight toggle ("Show row weights") in multiple
+  // field tables.
   .tabledrag-toggle-weight-wrapper {
     display :none;
   }
