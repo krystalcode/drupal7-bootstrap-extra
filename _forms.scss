@@ -26,6 +26,11 @@ form {
     }
   }
 
+  // Let's display the labels in a less dark color.
+  label {
+    color: $gray;
+  }
+
   // Display form action buttons on the right.
   // Forms not using rows are overriden to have the buttons at the left.
   // @Issue("The pull-right class should be added in the html instead so that we don't have to write overrides")
