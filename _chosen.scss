@@ -6,7 +6,8 @@
  * The Chosen module css is not needed and should be disabled.
  * The default chosen theme should also be disabled. This can be done by setting
  * accordingly the option "Use the default chosen theme" in the Chosen module
- * configuration.
+ * configuration. The 'chosen-drupal.css' provided by the 'chosen' module should
+ * also be excluded in the bootstrap.info file.
  */
 .chosen-container.form-control {
   padding: 0;
@@ -20,8 +21,14 @@
       margin: 6px 4px 0;
     }
     li.search-field {
-      height: 32px;
-      padding: 3px;
+      input {
+        width: 100% !important;
+        // Change the padding to be the same as with other bootstrap fields
+        // (form-control class). This there will rather too much padding between
+        // the search field and the choices, but that's less important than
+        // consistent look when the form is first rendered.
+        padding: $padding-base-vertical $padding-base-horizontal;
+      }
     }
   }
 }
