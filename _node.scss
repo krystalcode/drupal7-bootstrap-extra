@@ -2,6 +2,11 @@
  * General node rules.
  */
 .node {
+  // Separate panels within node displays from one another.
+  .panel {
+    margin-bottom: 20px;
+  }
+
   // Separate fields from each other when within a panel.
   // Handy when using bootstrap_fieldgroup panels for creating admin views.
   .panel-body {
