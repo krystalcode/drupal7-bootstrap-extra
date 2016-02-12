@@ -1,0 +1,48 @@
+/**
+ * General node rules.
+ */
+.node {
+  // Separate fields from each other when within a panel.
+  // Handy when using bootstrap_fieldgroup panels for creating admin views.
+  .panel-body {
+    .field {
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding-top: 10px;
+      border-top: 1px dashed $gray-lighter;
+
+      &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0;
+      }
+    }
+  }
+
+  // We want ordered/unordered lists to be normally styled when they are
+  // rendered as part of a field, which would imply that they were added by a
+  // rich text editor in a textarea.
+  .field {
+    ol {
+      list-style-type: decimal;
+    }
+    ul {
+      list-style-type: disc;
+    }
+    ol, ul {
+      list-style-position: inside;
+    }
+  }
+
+  // Render taxonomies inline.
+  .field-type-taxonomy-term-reference {
+    .field-item {
+      display: inline;
+      margin-left: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
